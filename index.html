@@ -1,603 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Edeal Samuel | Official Biography</title>
-  <!-- Google Fonts & simple reset -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #f5f7fc;
-      color: #1e293b;
-      line-height: 1.5;
-      scroll-behavior: smooth;
-    }
-
-    /* container utility */
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-
-    /* header & navigation */
-    header {
-      background: #ffffff;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03), 0 2px 6px rgba(0, 0, 0, 0.05);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      backdrop-filter: blur(2px);
-    }
-
-    .nav-bar {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 0;
-    }
-
-    .logo a {
-      font-weight: 700;
-      font-size: 1.6rem;
-      letter-spacing: -0.3px;
-      background: linear-gradient(135deg, #2c3e66, #1f2b48);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      text-decoration: none;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      font-weight: 500;
-      color: #1e293b;
-      transition: 0.2s ease;
-      font-size: 1rem;
-      padding: 0.5rem 0;
-      border-bottom: 2px solid transparent;
-    }
-
-    .nav-links a:hover, .nav-links a.active {
-      color: #2c3e66;
-      border-bottom-color: #2c3e66;
-    }
-
-    /* main sections */
-    section {
-      padding: 3rem 0 4rem 0;
-    }
-
-    .hero {
-      padding-top: 2rem;
-      padding-bottom: 2rem;
-    }
-
-    .two-columns {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 3rem;
-    }
-
-    .hero-content {
-      flex: 1.2;
-    }
-
-    .hero-image {
-      flex: 0.9;
-      display: flex;
-      justify-content: center;
-    }
-
-    .photo-frame {
-      background: linear-gradient(145deg, #e9eef4, #ffffff);
-      padding: 0.6rem;
-      border-radius: 2rem;
-      box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.15);
-      max-width: 320px;
-      width: 100%;
-    }
-
-    .photo-frame img {
-      width: 100%;
-      height: auto;
-      border-radius: 1.5rem;
-      object-fit: cover;
-      display: block;
-      aspect-ratio: 3/4;
-      background: #d9e0eb;
-    }
-
-    .greeting {
-      font-size: 1rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: #4b6589;
-      font-weight: 600;
-      margin-bottom: 0.75rem;
-    }
-
-    h1 {
-      font-size: 2.8rem;
-      font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 1rem;
-      color: #0f172a;
-    }
-
-    .highlight {
-      background: linear-gradient(120deg, #e6eefc, #cddef5);
-      padding: 0 0.2rem;
-    }
-
-    .intro-text {
-      font-size: 1.1rem;
-      color: #334155;
-      margin: 1.2rem 0;
-    }
-
-    .btn-group {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin: 1.8rem 0 0.5rem;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 0.75rem 1.8rem;
-      border-radius: 40px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.25s;
-    }
-
-    .btn-primary {
-      background: #1f2b48;
-      color: white;
-      border: 1px solid #1f2b48;
-    }
-
-    .btn-primary:hover {
-      background: #2c3e66;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 18px rgba(31, 43, 72, 0.2);
-    }
-
-    .btn-outline {
-      border: 1px solid #1f2b48;
-      color: #1f2b48;
-      background: transparent;
-    }
-
-    .btn-outline:hover {
-      background: #f0f4fa;
-      transform: translateY(-2px);
-    }
-
-    /* about / card style */
-    .about-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-
-    .bio-card, .achievement-card, .interest-card {
-      background: white;
-      border-radius: 2rem;
-      padding: 1.8rem 2rem;
-      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.05);
-      transition: 0.2s;
-      border: 1px solid #eef2f8;
-    }
-
-    h2 {
-      font-size: 1.9rem;
-      font-weight: 600;
-      margin-bottom: 1.2rem;
-      letter-spacing: -0.3px;
-      display: inline-block;
-      border-left: 5px solid #2c3e66;
-      padding-left: 1rem;
-    }
-
-    h3 {
-      font-size: 1.4rem;
-      font-weight: 600;
-      margin: 1rem 0 0.5rem;
-      color: #1e2b41;
-    }
-
-    .school-list {
-      list-style: none;
-      margin-top: 0.8rem;
-    }
-
-    .school-list li {
-      margin-bottom: 0.45rem;
-      padding-left: 1.4rem;
-      position: relative;
-    }
-
-    .school-list li::before {
-      content: "▹";
-      position: absolute;
-      left: 0;
-      color: #2c3e66;
-    }
-
-    .accident-note {
-      background: #fef7e0;
-      border-left: 4px solid #e6b422;
-      padding: 1rem 1.5rem;
-      border-radius: 1rem;
-      margin: 1rem 0;
-    }
-
-    .flex-stats {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      margin-top: 1rem;
-    }
-
-    .stat-badge {
-      background: #f1f5f9;
-      border-radius: 60px;
-      padding: 0.3rem 1rem;
-      font-weight: 500;
-    }
-
-    /* contact page */
-    .contact-wrapper {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2.5rem;
-      background: white;
-      border-radius: 2rem;
-      padding: 2rem;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.05);
-    }
-    .contact-info {
-      flex: 1;
-    }
-    .contact-form {
-      flex: 1;
-    }
-    .contact-detail-item {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin: 1.5rem 0;
-    }
-    .contact-icon {
-      font-size: 1.5rem;
-      background: #eef2ff;
-      width: 48px;
-      height: 48px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 60px;
-    }
-    .form-group {
-      margin-bottom: 1.2rem;
-    }
-    input, textarea {
-      width: 100%;
-      padding: 0.9rem 1rem;
-      border-radius: 1rem;
-      border: 1px solid #cfdfed;
-      font-family: 'Inter', sans-serif;
-      transition: 0.2s;
-    }
-    input:focus, textarea:focus {
-      outline: none;
-      border-color: #2c3e66;
-      box-shadow: 0 0 0 3px rgba(44,62,102,0.1);
-    }
-    button {
-      background: #1f2b48;
-      color: white;
-      border: none;
-      padding: 0.8rem 1.8rem;
-      border-radius: 40px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: 0.2s;
-    }
-    button:hover {
-      background: #2c3e66;
-      transform: translateY(-2px);
-    }
-
-    footer {
-      background: #0f172a;
-      color: #cbd5e1;
-      text-align: center;
-      padding: 2rem;
-      margin-top: 2rem;
-      font-size: 0.9rem;
-    }
-
-    /* page active state */
-    .hidden-page {
-      display: none;
-    }
-
-    /* responsive */
-    @media (max-width: 780px) {
-      .container {
-        padding: 0 1.5rem;
-      }
-      .nav-bar {
-        flex-direction: column;
-        gap: 0.8rem;
-      }
-      .nav-links {
-        gap: 1.2rem;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      .two-columns {
-        flex-direction: column-reverse;
-        text-align: center;
-      }
-      h1 {
-        font-size: 2rem;
-      }
-      .btn-group {
-        justify-content: center;
-      }
-      .contact-wrapper {
-        flex-direction: column;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edeal Samuel | Aspiring Businessman in a Suit</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-
-<header>
-  <div class="container nav-bar">
-    <div class="logo"><a href="#" data-nav="home">Edeal Samuel</a></div>
-    <ul class="nav-links">
-      <li><a href="#" data-nav="home" class="nav-link active">Home</a></li>
-      <li><a href="#" data-nav="about" class="nav-link">About</a></li>
-      <li><a href="#" data-nav="contact" class="nav-link">Contact</a></li>
-    </ul>
-  </div>
-</header>
-
-<main>
-  <!-- HOME PAGE -->
-  <div id="home-page" class="page-content">
-    <div class="container hero">
-      <div class="two-columns">
-        <div class="hero-content">
-          <div class="greeting">✦ welcome to my world</div>
-          <h1>I'm <span class="highlight">Edeal Samuel</span><br> Aspiring Entrepreneur</h1>
-          <p class="intro-text">Grade 11 student with a passion for business, management, and continuous growth. 
-          I've achieved top scores in Grade 1 & 4, and I'm working towards becoming a responsible, accomplished man.</p>
-          <div class="btn-group">
-            <a href="#" data-nav="about" class="btn btn-primary">Explore my journey</a>
-            <a href="#" data-nav="contact" class="btn btn-outline">Get in touch</a>
-          </div>
-          <p style="margin-top: 1.2rem; font-size: 0.9rem; color: #4b5563;">💼 "Success is the sum of small efforts, repeated day in and day out."</p>
-        </div>
-        <div class="hero-image">
-          <div class="photo-frame">
-            <!-- Photo: a confident man wearing a formal suit - professional headshot -->
-            <img src="https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=600&h=750&fit=crop" 
-                 alt="Professional man wearing a suit - Edeal Samuel portrait"
-                 onerror="this.src='https://placehold.co/500x600/2c3e66/ffffff?text=Edeal+Samuel+in+Suit'">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container" style="padding-bottom: 2rem;">
-      <div style="background: white; border-radius: 1.5rem; padding: 1.5rem; box-shadow: 0 5px 15px rgba(0,0,0,0.02);">
-        <p style="font-weight: 500;">📍 Based in Addis Ababa, Ethiopia | Born August 29, 2008 | Currently Grade 11 at Bori Secondary School</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- ABOUT PAGE -->
-  <div id="about-page" class="page-content hidden-page">
-    <div class="container">
-      <section>
-        <h2>📖 My Story & Education</h2>
-        <div class="about-grid">
-          <div class="bio-card">
-            <p><strong>Full name:</strong> Edeal Samuel <br> <strong>Born:</strong> August 29, 2008 (G.C.) in Addis Ababa, Ethiopia.</p>
-            <p>I began my education at the age of four. My academic journey has taken me through several wonderful schools, each adding a unique chapter to my life.</p>
-            <ul class="school-list">
-              <li>Sunny Side Academy (Nursery – Grade 1)</li>
-              <li>True Hopes Academy (Grades 2 – 3)</li>
-              <li>Elroi Primary School (Grade 4)</li>
-              <li>Rehobot School (Grades 5 – 6)</li>
-              <li>Burka Bori Primary School (Grades 7 – 8)</li>
-              <li>Bori Secondary School (Grades 9 – 11) — Currently in Grade 11, intermediate level</li>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo"><a href="index.html">✦ EDEAL SAMUEL</a></div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-item">🏠 Home</a></li>
+                <li><a href="about.html" class="nav-item">📖 About</a></li>
+                <li><a href="achievements.html" class="nav-item">🏆 Achievements</a></li>
+                <li><a href="contact.html" class="nav-item">📧 Contact</a></li>
             </ul>
-          </div>
-
-          <div class="achievement-card">
-            <h3>🏆 Academic successes</h3>
-            <div class="flex-stats">
-              <span class="stat-badge">🏅 Highest in school - Grade 1</span>
-              <span class="stat-badge">🏅 Highest in school - Grade 4</span>
-              <span class="stat-badge">📚 Continuous improvement mindset</span>
-            </div>
-            <p style="margin-top: 1rem;">I believe in learning new things every day and pushing beyond limits. My management skills are growing, and I aim to become a successful businessman.</p>
-          </div>
-
-          <div class="interest-card">
-            <h3>⚽ Interests & ambitions</h3>
-            <p>I love playing football, learning new skills, and I'm fascinated by cars — though I haven't driven yet. My favorite color is gray, and I prefer wearing suits because I envision a professional career that demands elegance and responsibility.</p>
-            <p style="margin-top: 0.8rem;"><strong>💡 Ambition:</strong> To become a successful businessman and a responsible, accomplished man who makes a positive impact.</p>
-          </div>
-
-          <div class="bio-card">
-            <h3>⚠️ A turning point</h3>
-            <div class="accident-note">
-              <p>When I was nine years old, while going to church with my family, I got distracted watching some boys play football — a sport I deeply enjoy. Unfortunately, I fell into a hole and injured my left shoulder. That moment taught me resilience and awareness, shaping my cautious yet determined spirit.</p>
-            </div>
-          </div>
-
-          <div class="achievement-card">
-            <h3>🌟 Personal philosophy</h3>
-            <p>Though I’m still discovering my full potential, my strong management skills and discipline drive me forward. I continuously work on self-improvement, balancing academics, sports, and future business aspirations.</p>
-          </div>
         </div>
-      </section>
-    </div>
-  </div>
+    </nav>
 
-  <!-- CONTACT PAGE -->
-  <div id="contact-page" class="page-content hidden-page">
-    <div class="container">
-      <section>
-        <h2>📬 Let’s connect</h2>
-        <div class="contact-wrapper">
-          <div class="contact-info">
-            <p style="margin-bottom: 1rem; font-size: 1.1rem;">I’d love to hear from you — whether it's about collaboration, mentorship, or just a meaningful conversation.</p>
-            <div class="contact-detail-item">
-              <div class="contact-icon">📍</div>
-              <div>Addis Ababa, Ethiopia</div>
+    <main>
+        <section class="hero">
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <span class="greeting">✦ WELCOME TO MY WORLD ✦</span>
+                    <h1>Edeal Samuel</h1>
+                    <p class="tagline">Future Businessman • Suit Enthusiast • Resilient Leader</p>
+                    <p class="bio-short">Born in Addis Ababa (Aug 29, 2008). From top-scoring student to ambitious entrepreneur — I wear resilience like a tailored suit. Football fuels my spirit, management sharpens my mind.</p>
+                    <a href="about.html" class="btn-primary">Discover My Journey →</a>
+                    <a href="contact.html" class="btn-outline">Let's Connect</a>
+                </div>
+                <div class="hero-image">
+                    <div class="photo-frame">
+                        <img src="https://ui-avatars.com/api/?background=0f172a&color=facc15&rounded=true&size=300&bold=true&fontsize=0.4&name=Edeal+S" alt="Edeal Samuel" class="profile-img">
+                        <div class="photo-caption">👔 Edeal Samuel | Grade 11 | Suit Dreamer</div>
+                        <p style="font-size:0.8rem; margin-top:8px;"><i class="fas fa-map-marker-alt"></i> Addis Ababa, Ethiopia</p>
+                    </div>
+                </div>
             </div>
-            <div class="contact-detail-item">
-              <div class="contact-icon">📧</div>
-              <div>edeal.samuel@example.com</div>
+        </section>
+
+        <section class="home-quick-facts">
+            <div class="container">
+                <h2>⚡ What Makes Me Unique</h2>
+                <div class="facts-grid">
+                    <div class="fact-card"><i class="fas fa-futbol"></i><h3>⚽ Football Fanatic</h3><p>Playing & watching since childhood — it taught me teamwork</p></div>
+                    <div class="fact-card"><i class="fas fa-chart-line"></i><h3>📊 Natural Manager</h3><p>Organized, strategic, born to lead businesses</p></div>
+                    <div class="fact-card"><i class="fas fa-car"></i><h3>🚗 Driving Dreams</h3><p>Can't wait to get behind the wheel</p></div>
+                    <div class="fact-card"><i class="fas fa-user-tie"></i><h3>👔 Suit Lifestyle</h3><p>I want a career that demands a suit every day</p></div>
+                </div>
             </div>
-            <div class="contact-detail-item">
-              <div class="contact-icon">📞</div>
-              <div>+251 9XX XXX XXX</div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2026 Edeal Samuel — Built with ambition, styled for success</p>
+            <div class="social-links-footer">
+                <a href="https://t.me/Rsyra12_21" target="_blank"><i class="fab fa-telegram"></i> Telegram: @Rsyra12_21</a>
+                <a href="mailto:edealsamuel2000@gmail.com"><i class="fas fa-envelope"></i> edealsamuel2000@gmail.com</a>
             </div>
-            <div class="contact-detail-item">
-              <div class="contact-icon">💼</div>
-              <div>Future businessman & leader</div>
-            </div>
-            <p style="margin-top: 1rem; font-size: 0.85rem; background: #f8fafc; padding: 0.8rem; border-radius: 1rem;">⭐ Follow my journey — open to networking and opportunities.</p>
-          </div>
-          <div class="contact-form">
-            <form id="demo-contact-form">
-              <div class="form-group">
-                <input type="text" placeholder="Your full name" required>
-              </div>
-              <div class="form-group">
-                <input type="email" placeholder="Email address" required>
-              </div>
-              <div class="form-group">
-                <textarea rows="4" placeholder="Write your message..."></textarea>
-              </div>
-              <button type="submit">Send message ✨</button>
-              <p style="font-size: 0.7rem; margin-top: 0.7rem;">*Demo contact form — thank you for reaching out</p>
-            </form>
-          </div>
         </div>
-      </section>
-    </div>
-  </div>
-</main>
-
-<footer>
-  <div class="container">
-    <p>© 2026 Edeal Samuel — Designed with purpose. From Addis Ababa to the world.</p>
-    <p style="margin-top: 0.5rem; font-size: 0.8rem;">"Aspiring businessman, lifelong learner, and believer in excellence."</p>
-  </div>
-</footer>
-
-<script>
-  // simple SPA-like page navigation between home, about, contact
-  const pages = {
-    home: document.getElementById('home-page'),
-    about: document.getElementById('about-page'),
-    contact: document.getElementById('contact-page')
-  };
-
-  const navLinks = document.querySelectorAll('.nav-link');
-  
-  function activatePage(pageId) {
-    // hide all pages
-    Object.values(pages).forEach(page => {
-      if(page) page.classList.add('hidden-page');
-    });
-    // show selected
-    if(pages[pageId]) {
-      pages[pageId].classList.remove('hidden-page');
-    }
-    // update active class on nav links
-    navLinks.forEach(link => {
-      const navValue = link.getAttribute('data-nav');
-      if(navValue === pageId) {
-        link.classList.add('active');
-      } else {
-        link.classList.remove('active');
-      }
-    });
-    // update document title for better experience
-    if(pageId === 'home') document.title = "Edeal Samuel | Home";
-    if(pageId === 'about') document.title = "Edeal Samuel | Biography & Journey";
-    if(pageId === 'contact') document.title = "Edeal Samuel | Contact";
-  }
-
-  // event listeners for navigation
-  navLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const target = link.getAttribute('data-nav');
-      if(target === 'home') activatePage('home');
-      else if(target === 'about') activatePage('about');
-      else if(target === 'contact') activatePage('contact');
-      // smooth scroll to top on page change
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  });
-
-  // also the logo and buttons that have data-nav attribute
-  const extraNavs = document.querySelectorAll('[data-nav]');
-  extraNavs.forEach(el => {
-    if(el.classList && (el.classList.contains('btn') || el.classList.contains('logo') || el.tagName === 'A')) {
-      el.addEventListener('click', (e) => {
-        const navTarget = el.getAttribute('data-nav');
-        if(navTarget && (navTarget === 'home' || navTarget === 'about' || navTarget === 'contact')) {
-          e.preventDefault();
-          if(navTarget === 'home') activatePage('home');
-          if(navTarget === 'about') activatePage('about');
-          if(navTarget === 'contact') activatePage('contact');
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-      });
-    }
-  });
-
-  // contact form alert simulation (just demo)
-  const contactForm = document.getElementById('demo-contact-form');
-  if(contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      alert('Thank you, ' + (contactForm.querySelector('input[type="text"]').value || 'friend') + '! Your message has been sent. Edeal will reach out soon.');
-      contactForm.reset();
-    });
-  }
-
-  // default: home active, ensure about/contact hidden
-  activatePage('home');
-</script>
+    </footer>
 </body>
 </html>
